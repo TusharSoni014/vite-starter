@@ -1,22 +1,17 @@
 import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <>
+    <div className="__app bg-black text-white">
+      <Header />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="text-black">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Quibusdam maiores, neque dolor alias facilis ipsum repudiandae
-              quam eaque vitae, atque doloribus culpa nisi provident. Dolorum
-              excepturi cumque reiciendis exercitationem quos.
-            </div>
-          }
-        ></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/login" element={<Login />}></Route>
       </Routes>
-    </>
+    </div>
   );
 }
 
